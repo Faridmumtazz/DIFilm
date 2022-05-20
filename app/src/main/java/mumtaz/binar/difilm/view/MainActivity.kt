@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
         rv_news.layoutManager = LinearLayoutManager(this)
         rv_news.adapter = adapternews
 
-        getDataNews()
+        getDataNew()
     }
 
-    fun getDataNews(){
+    fun getDataNew(){
         val viewModel = ViewModelProvider(this).get(ViewModelNews::class.java)
         viewModel.getLiveDataObserver().observe(this, Observer {
             if (it != null) {
